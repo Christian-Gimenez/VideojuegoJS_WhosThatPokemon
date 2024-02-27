@@ -1,5 +1,5 @@
 <h1>Videojuego Who's That Pokémon - JS Vanilla</h1>
-<p>Videojuego de cartas recreadno el clásico ¿Quién es ese Pokémon? de la serie original de TV Pokémon, creado bajo las restricciones pedidas por el profesor, utilizando JS Vanilla con funciones constructoras, eventos, peticiones AJAX a la API REST: <a href="https://pokeapi.co/"/>https://pokeapi.co/</a>, realizando persistencia de datos con LocalStorage y estilando con CSS 3 utilizando Grid y Flexbox.</p>
+<p>Videojuego de cartas recreando el clásico ¿Quién es ese Pokémon? de la serie original de TV Pokémon, creado bajo las restricciones pedidas por el profesor, utilizando JS Vanilla con funciones constructoras, eventos, peticiones AJAX a la API REST: <a href="https://pokeapi.co/"/>https://pokeapi.co/</a>, realizando persistencia de datos con LocalStorage y estilando con CSS 3 utilizando Grid y Flexbox.</p>
 <p>El videojuego fue desarrollado 100% en Frontend como práctica de la asignatura Desarrollo Web en Entorno Cliente en la FP Superior 2º DAW.</p>
 <h2>Reglas del juego:</h2>
 <p>El juego consiste en acertar el nombre del Pokémon de la silueta mostrada en cada una de
