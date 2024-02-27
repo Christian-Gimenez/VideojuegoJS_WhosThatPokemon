@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to bottom, #4a8ee2, #e6fa81);
+  background-repeat: none;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  min-height: 50px;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+header img {
+  width: 300px;
+}
+
+header h1 {
+  font-family: 'Tahoma', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffe031;
+  text-shadow: 2px 2px 0 #396bba;
+  letter-spacing: 2px;
+}
+
+.reglas-juego {
+  max-width: 500px;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  display: none;
+}
+
+.reglas-juego ul {
+  list-style: none;
+}
+
+#contenedor-tablero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#tablero {
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+label[for="inputDificultad"] {
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  #tablero {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  #tablero {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.carta {
+  min-width: 170px;
+  min-height: 151px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #333;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+  .carta {
+    min-width: 100%;
+    /* Ancho completo en pantallas pequeñas */
+  }
+}
+
+.carta figcaption {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  margin-top: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.carta img {
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+  max-width: 100%;
+  height: auto;
+}
+
+.carta input[type="text"] {
+  padding: 5px;
+  margin-top: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  transition: border 0.3s ease-in-out;
+}
+
+.carta input[type="text"]:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.cara-oculta {
+  background-image: url("../imgs/whosthatpokemon.png");
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+}
+
+.ocultar-imagen,
+.ocultar-texto {
+  opacity: 0;
+}
+
+.oscurecer-imagen {
+  filter: brightness(0%);
+}
+
+.bug {
+  background-color: #88950c;
+}
+
+.electric {
+  background-color: #f6b918;
+}
+
+.fire {
+  background-color: #cc2200;
+}
+
+.grass {
+  background-color: #73c136;
+}
+
+.normal {
+  background-color: #c6c0b9;
+}
+
+.rock {
+  background-color: #9d873a;
+}
+
+.dark {
+  background-color: #3e2d23;
+}
+
+.fairy {
+  background-color: #f2b6f5;
+}
+
+.flying {
+  background-color: #8293d7;
+}
+
+.ground {
+  background-color: #d1b25a;
+}
+
+.poison {
+  background-color: #914393;
+}
+
+.steel {
+  background-color: #8f8e9e;
+}
+
+.dragon {
+  background-color: #725ad2;
+}
+
+.fighting {
+  background-color: #79341d;
+}
+
+.ghost {
+  background-color: #57569f;
+}
+
+.ice {
+  background-color: #7cd9f6;
+}
+
+.psychic {
+  background-color: #e9457e;
+}
+
+.water {
+  background-color: #2f82d4;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+form div {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form div.error {
+  color: red;
+}
+
+form div.bien {
+  color: green;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+input[type="submit"],
+button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: rgb(89, 113, 186);
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  background-color: #35498d;
+  /* Color guapo */
+  color: #fff;
+}
+
+input:disabled,
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.resultado {
+  font-size: 20px;
+  color: #333;
+  margin-top: 15px;
+}
+
+.logo-whos {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.puntuaciones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 800px;
+  margin-top: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+caption {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #1524a4;
+  color: #fff;
+}
+
+thead {
+  background-color: #1b5a8d;
+  color: #fff;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: center;
+}
+
+th {
+  background-color: #e8cf2f;
+  color: #393939;
+  cursor: pointer;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+  background-color: #e0e0e0;
+}
